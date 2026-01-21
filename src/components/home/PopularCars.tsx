@@ -4,7 +4,7 @@ import CarCard from '../cars/CarCard';
 
 export default function PopularCars() {
   return (
-    <section className='w-[1312px] h-[452px]' >
+    <section className="w-[1312px] ">
       <div className="flex items-center justify-between">
         <h2 className="my-8 mx-7 text-xl text-[#90A3BF] font-semibold">
           Popular Cars

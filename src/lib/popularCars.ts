@@ -1,0 +1,43 @@
+import { Car } from '@/types/car';
+export const popularCars = [
+  {
+    id: '2',
+    name: 'BMW M4',
+    type: 'Sport',
+    image: 'https://pngimg.com/uploads/bmw/bmw_PNG99534.png',
+    pricePerDay: 85,
+    fuel: '75L',
+    transmission: 'Manual',
+    capacity: 4,
+  },
+  {
+    id: '3',
+    name: 'Audi R8',
+    type: 'Sport',
+    image: 'https://pngimg.com/uploads/audi/audi_PNG1760.png',
+    pricePerDay: 95,
+    fuel: '73L',
+    transmission: 'Automatic',
+    capacity: 2,
+  },
+  {
+    id: '4',
+    name: 'Mercedes S-Class',
+    type: 'Luxury',
+    image: 'https://pngimg.com/uploads/mercedes/mercedes_PNG80171.png',
+    pricePerDay: 110,
+    fuel: '85L',
+    transmission: 'Automatic',
+    capacity: 5,
+  },
+  {
+    id: '5',
+    name: 'Lamborghini Aventador',
+    type: 'Sport',
+    image: 'https://pngimg.com/uploads/lamborghini/lamborghini_PNG10709.png',
+    pricePerDay: 150,
+    fuel: '90L',
+    transmission: 'Manual',
+    capacity: 2,
+  },
+];

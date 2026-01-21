@@ -1,6 +1,7 @@
-import Hero from "@/components/home/Hero";
-import PopularCars from "@/components/home/PopularCars";
-import PickupDropoffRow from "@/components/home/PickupDropoffRow";
+import Hero from '@/components/home/Hero';
+import PopularCars from '@/components/home/PopularCars';
+import PickupDropoffRow from '@/components/home/PickupDropoffRow';
+import RecommendationCar from '@/components/home/RecomendationCar';
 
 export default function HomePage() {
   return (
@@ -8,6 +9,9 @@ export default function HomePage() {
       <Hero />
       <PickupDropoffRow />
       <PopularCars />
+      <div className="mb-16">
+        <RecommendationCar />
+      </div>
     </div>
   );
 }

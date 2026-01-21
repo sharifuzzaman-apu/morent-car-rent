@@ -1,18 +1,12 @@
-export type CarType =
-  | "Sport"
-  | "SUV"
-  | "MPV"
-  | "Sedan"
-  | "Coupe"
-  | "Hatchback";
+export type CarType = 'Sport' | 'SUV' | 'MPV' | 'Sedan' | 'Coupe' | 'Hatchback';
 
 export interface Car {
   id: string;
   name: string;
-  type: CarType;
-  pricePerDay: number;
-  capacity: number;
-  fuel: string;
-  transmission: "Manual" | "Auto";
+  type: string;
   image: string;
+  pricePerDay: number;
+  fuel: string;
+  transmission: string;
+  capacity: number;
 }

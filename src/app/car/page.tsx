@@ -1,79 +1,12 @@
-// 'use client';
-
-// import { useRouter } from 'next/navigation';
-// import { useParams } from 'next/navigation';
-// import { mockCars } from '@/lib/mockCars';
-// import { useAppDispatch } from '@/store/hooks';
-// import { setCar } from '@/store/bookingSlice';
-// import { useEffect } from 'react';
-
-// export default function CarDetailPage() {
-//   const { id } = useParams();
-//   const router = useRouter();
-//   const dispatch = useAppDispatch();
-
-//   const car = mockCars.find((c) => c.id === id);
-
-//   useEffect(() => {
-//     if (car) dispatch(setCar(car));
-//   }, [car, dispatch]);
-
-//   if (!car) {
-//     return <p className="text-center py-20">Car not found</p>;
-//   }
-
-//   return (
-//     <div className="container mx-auto px-4 py-8 grid grid-cols-1 lg:grid-cols-2 gap-8">
-//       {/* Left: Image */}
-//       <div className="rounded-xl overflow-hidden">
-//         <img
-//           src={car.image}
-//           alt={car.name}
-//           className="w-full h-full object-cover"
-//         />
-//       </div>
-
-//       {/* Right: Details */}
-//       <div className="space-y-4">
-//         <h1 className="text-2xl font-bold">{car.name}</h1>
-//         <p className="text-gray-500">{car.type}</p>
-
-//         <div className="flex gap-4">
-//           <span>Capacity: {car.capacity}</span>
-//           <span>Fuel: {car.fuel}</span>
-//           <span>Transmission: {car.transmission}</span>
-//         </div>
-
-//         <p className="text-xl font-semibold">${car.pricePerDay} / day</p>
-
-//         {/* Date Selection */}
-//         <div className="flex gap-4">
-//           <input type="date" className="border rounded px-3 py-2" />
-//           <input type="date" className="border rounded px-3 py-2" />
-//         </div>
-
-//         <button
-//           onClick={() => router.push('/checkout')}
-//           className="mt-4 rounded-lg bg-blue-600 px-6 py-3 text-white font-semibold"
-//         >
-//           Rent Now
-//         </button>
-//       </div>
-//     </div>
-//   );
-// }
-
-// ================================
-
 'use client';
 
 import { useRouter } from 'next/navigation';
 import { useParams } from 'next/navigation';
-import { cars } from '@/lib/cars';
+import { mockCars } from '@/lib/mockCars';
 import { useAppDispatch } from '@/store/hooks';
 import { setCar } from '@/store/bookingSlice';
 import { useEffect } from 'react';
-
+import { div } from 'framer-motion/client';
 import FiltersSidebar from '@/components/cars/FilterSidebar';
 
 // Dummy thumbnails –
@@ -101,18 +34,18 @@ const reviews = [
 
 export default function CarDetail() {
   const { id } = useParams();
-  const router = useRouter();
+
   const dispatch = useAppDispatch();
 
-  const car = cars.find((c) => c.id === id);
+  const car = mockCars.find((c) => c.id === id);
 
   useEffect(() => {
     if (car) dispatch(setCar(car));
   }, [car, dispatch]);
 
   return (
-    <div className="w-full  px-4 py-8">
-      <div className="flex gap-30">
+    <div className="w-full max-w-[1312px] mx-auto px-4 py-8">
+      <div className="flex gap-6">
         <aside className="w-[250px] min-w-[220px]">
           <FiltersSidebar />
         </aside>
@@ -254,15 +187,12 @@ export default function CarDetail() {
                 <div className="bg-white rounded-2xl shadow-sm p-8">
                   <div className="flex items-center justify-between mb-4">
                     <h3 className="text-lg font-bold">Recent Car</h3>
-                    <button
-                      onClick={() => router.push(`/cars`)}
-                      className="text-[#3563E9] text-sm font-semibold"
-                    >
+                    <button className="text-[#3563E9] text-sm font-semibold">
                       View All
                     </button>
                   </div>
                   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                    {cars.slice(0, 3).map((recent, i) => (
+                    {mockCars.slice(0, 3).map((recent, i) => (
                       <div
                         key={recent.id}
                         className="bg-[#F6F7F9] rounded-xl p-5 flex flex-col relative"
@@ -305,15 +235,12 @@ export default function CarDetail() {
                 <div className="bg-white rounded-2xl shadow-sm p-8">
                   <div className="flex items-center justify-between mb-4">
                     <h3 className="text-lg font-bold">Recommendation Car</h3>
-                    <button
-                      onClick={() => router.push(`/cars`)}
-                      className="text-[#3563E9] text-sm font-semibold"
-                    >
+                    <button className="text-[#3563E9] text-sm font-semibold">
                       View All
                     </button>
                   </div>
                   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                    {cars.slice(3, 6).map((car, i) => (
+                    {mockCars.slice(3, 6).map((car, i) => (
                       <div
                         key={car.id}
                         className="bg-[#F6F7F9] rounded-xl p-5 flex flex-col relative"

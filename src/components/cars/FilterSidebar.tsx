@@ -1,17 +1,17 @@
 export default function FiltersSidebar() {
   return (
-    <div className="rounded-xl bg-white p-6 shadow space-y-6">
+    <div className="relative right-20 w-[360px] h-full bg-white p-6 shadow space-y-6">
       {/* Car Type */}
       <div>
         <h3 className="font-semibold mb-2">Car Type</h3>
         <div className="flex flex-col gap-1">
-          {["Sport", "SUV", "MPV", "Sedan", "Coupe", "Hatchback"].map(
+          {['Sport', 'SUV', 'MPV', 'Sedan', 'Coupe', 'Hatchback'].map(
             (type) => (
               <label key={type} className="flex items-center gap-2">
                 <input type="checkbox" />
                 <span>{type}</span>
               </label>
-            )
+            ),
           )}
         </div>
       </div>

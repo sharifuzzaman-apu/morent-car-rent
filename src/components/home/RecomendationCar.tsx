@@ -1,13 +1,13 @@
 import Link from 'next/link';
-import { popularCars } from '@/lib/popularCars';
+import { mockCars } from '@/lib/mockCars';
 import CarCard from '../cars/CarCard';
 
-export default function PopularCars() {
+export default function RecommendationCar() {
   return (
-    <section className='w-[1312px] h-[452px]' >
+    <section className="w-[1312px] mb-16">
       <div className="flex items-center justify-between">
         <h2 className="my-8 mx-7 text-xl text-[#90A3BF] font-semibold">
-          Popular Cars
+          Recomendation Car
         </h2>
         <Link href="/cars" className="text-sm text-blue-600 font-medium">
           View All
@@ -15,9 +15,16 @@ export default function PopularCars() {
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        {popularCars.map((car) => (
+        {mockCars.map((car) => (
           <CarCard key={car.id} car={car} />
         ))}
+      </div>
+      <div className="flex justify-center mt-8">
+        <Link href="/cars">
+          <button className="px-6 py-3 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition">
+            Show more car
+          </button>
+        </Link>
       </div>
     </section>
   );

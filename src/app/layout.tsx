@@ -10,7 +10,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="min-h-screen flex flex-col w-[1440px] mx-auto bg-[#F6F7F9] text-gray-900">
+      <body className="min-h-screen flex flex-col w-full mx-auto bg-[#F6F7F9] text-gray-900">
         <Providers>
           <Navbar />
           <main className="flex-1 w-[1312px] mx-auto">{children}</main>

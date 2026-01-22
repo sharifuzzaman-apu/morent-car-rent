@@ -3,7 +3,7 @@ export default function Footer() {
   return (
     <footer className="bg-white border-t border-gray-200 mt-12">
       <div className="max-w-[1312px] mx-auto px-4 pt-8 pb-4">
-        <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-8">
+        <div className="flex flex-col  md:flex-row md:justify-between md:items-start gap-8">
           {/* Logo and description */}
           <div className="flex-1 min-w-[200px]">
             <div className="text-blue-600 font-bold text-xl mb-2">MORENT</div>

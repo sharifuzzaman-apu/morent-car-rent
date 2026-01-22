@@ -59,7 +59,7 @@ export default function Navbar() {
               placeholder="Search cars or location..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              className="flex-1 rounded-l-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="flex-1 rounded-l-lg px-4 py-2 focus:outline-none "
             />
             <button
               type="submit"

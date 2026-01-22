@@ -33,6 +33,10 @@ export default function FiltersSidebar() {
       <div>
         <h3 className="font-semibold mb-2">Price Range</h3>
         <input type="range" min={0} max={200} className="w-full" />
+        <div>
+          <span>$70</span>
+          <span className="float-right">$200</span>
+        </div>
       </div>
     </div>
   );

@@ -288,7 +288,7 @@ export default function CheckoutPage() {
   };
 
   return (
-    <div className="bg-[#F6F7F9] min-h-screen">
+    <div className=" min-h-screen">
       <div className="container mx-auto px-4 py-8 grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* LEFT SIDE */}
         <div className="lg:col-span-2 space-y-6">
@@ -416,7 +416,7 @@ export default function CheckoutPage() {
         </div>
 
         {/* RIGHT SIDE */}
-        <div className="rounded-xl w-[492px] h-[520px] bg-white p-6 shadow space-y-4 border border-gray-100">
+        <div className="rounded-xl w-auto h-[520px] bg-white p-6 shadow space-y-4 border border-gray-100">
           {/* Header */}
           <div>
             <h2 className="text-lg font-semibold text-gray-800">

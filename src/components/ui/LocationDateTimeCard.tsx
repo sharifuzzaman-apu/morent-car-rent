@@ -22,16 +22,16 @@ export default function LocationDateTimeCard({
   setTime,
 }: LocationDateTimeProps) {
   return (
-    <div className="bg-white rounded-[15px] w-[582px] h-[136px] shadow flex flex-col justify-center px-4">
+    <div className="bg-white rounded-[15px] w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg shadow flex flex-col justify-center px-4 py-4 mx-auto">
       <h3 className="px-3 font-bold text-gray-700">{title}</h3>
 
-      <div className="flex justify-between mt-2 gap-6 ">
-        <div className="flex flex-col border-r pr-6">
-          <label className="  text-gray-600">Location</label>
+      <div className="flex flex-col sm:flex-row justify-between mt-2 gap-4 sm:gap-6">
+        <div className="flex flex-col sm:border-r sm:pr-6">
+          <label className="text-gray-600">Location</label>
           <select
             value={location}
             onChange={(e) => setLocation(e.target.value)}
-            className=" rounded  py-1"
+            className="rounded py-1"
           >
             <option value="">Select Your City</option>
             {locations.map((loc) => (
@@ -42,22 +42,22 @@ export default function LocationDateTimeCard({
           </select>
         </div>
 
-        <div className="flex flex-col border-r pr-6">
-          <label className="  text-gray-600 ">Date</label>
+        <div className="flex flex-col sm:border-r sm:pr-6">
+          <label className="text-gray-600">Date</label>
           <input
             type="date"
             value={date}
             onChange={(e) => setDate(e.target.value)}
-            className="  rounded  py-1"
+            className="rounded py-1"
           />
         </div>
 
         <div className="flex flex-col">
-          <label className=" text-gray-600">Time</label>
+          <label className="text-gray-600">Time</label>
           <select
             value={time}
             onChange={(e) => setTime(e.target.value)}
-            className=" rounded  py-1"
+            className="rounded py-1"
           >
             <option value="">Select Time</option>
             {times.map((t) => (

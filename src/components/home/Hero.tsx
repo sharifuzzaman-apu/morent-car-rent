@@ -4,7 +4,7 @@ import HeroCard from '@/components/ui/HeroCard';
 
 export default function Hero() {
   return (
-    <section className="flex space-x-[32px] justify-center w-[1312px]">
+    <section className="flex flex-col md:flex-row justify-center w-full max-w-328 mx-auto gap-4 md:gap-8 px-2">
       <HeroCard
         title="The Best Platform for Car Rental"
         description="Ease of doing a car rental safely and reliably."

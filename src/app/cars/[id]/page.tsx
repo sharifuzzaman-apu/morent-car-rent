@@ -113,7 +113,7 @@ export default function CarDetail() {
   return (
     <div className="w-full  px-4 py-8">
       <div className="flex gap-30">
-        <aside className="w-[250px] min-w-[220px]">
+        <aside className="hidden lg:block w-[250px] min-w-[220px]">
           <FiltersSidebar />
         </aside>
         <main className="flex-1">

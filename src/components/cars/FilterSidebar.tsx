@@ -1,6 +1,6 @@
 export default function FiltersSidebar() {
   return (
-    <div className="relative right-20 w-[360px] h-full bg-white p-6 shadow space-y-6">
+    <div className="relative right-20 w-90 h-full bg-white p-6 shadow space-y-6">
       {/* Car Type */}
       <div>
         <h3 className="font-semibold mb-2">Car Type</h3>

@@ -4,8 +4,8 @@ import FiltersSidebar from '@/components/cars/FilterSidebar';
 export default function CarsPage() {
   return (
     <div className="container mx-auto px-4 py-8 grid grid-cols-1 lg:grid-cols-4 gap-6">
-      {/* Sidebar */}
-      <div className="lg:col-span-1 ">
+      {/* Sidebar (hidden on small screens) */}
+      <div className="hidden lg:block lg:col-span-1">
         <FiltersSidebar />
       </div>
 

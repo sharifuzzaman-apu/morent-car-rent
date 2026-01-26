@@ -13,7 +13,9 @@ export default function RootLayout({
       <body className="min-h-screen flex flex-col w-full mx-auto bg-[#F6F7F9] text-gray-900">
         <Providers>
           <Navbar />
-          <main className="flex-1 w-[1312px] mx-auto">{children}</main>
+          <main className="flex-1 w-full max-w-328 mx-auto px-2 md:px-4">
+            {children}
+          </main>
           <Footer />
         </Providers>
       </body>

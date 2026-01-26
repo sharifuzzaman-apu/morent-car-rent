@@ -22,7 +22,7 @@ export default function PickupDropoffRow() {
   };
 
   return (
-    <div className="flex justify-center my-auto items-center w-[1312px]">
+    <div className="flex flex-col md:flex-row justify-center my-auto items-center w-full max-w-328 mx-auto px-2 gap-4 md:gap-0">
       {/* Pick Up */}
       <LocationDateTimeCard
         title="Pick-Up"
@@ -36,7 +36,7 @@ export default function PickupDropoffRow() {
 
       <button
         onClick={handleSearch}
-        className="bg-[#3563E9] w-[60px] h-[60px]  text-white rounded-lg flex items-center justify-center mx-11"
+        className="bg-[#3563E9] w-12 h-12 md:w-15 md:h-15 text-white rounded-lg flex items-center justify-center my-4 md:my-0 md:mx-11"
       >
         <svg
           width="24"

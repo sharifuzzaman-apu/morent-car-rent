@@ -5,7 +5,7 @@ import RecommendationCar from '@/components/home/RecomendationCar';
 
 export default function HomePage() {
   return (
-    <div className="container mx-auto px-4 py-8 space-y-12">
+    <div className="w-full max-w-328 mx-auto px-2 md:px-4 py-8 space-y-12">
       <Hero />
       <PickupDropoffRow />
       <PopularCars />

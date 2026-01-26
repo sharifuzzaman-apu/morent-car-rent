@@ -5,7 +5,7 @@ export default function Footer() {
       <div className="max-w-[1312px] mx-auto px-4 pt-8 pb-4">
         <div className="flex flex-col  md:flex-row md:justify-between md:items-start gap-8">
           {/* Logo and description */}
-          <div className="flex-1 min-w-[200px]">
+          <div className="flex-1 min-w-50">
             <div className="text-blue-600 font-bold text-xl mb-2">MORENT</div>
             <p className="text-gray-500 text-sm max-w-xs">
               Our vision is to provide convenience and help increase your sales
@@ -13,7 +13,7 @@ export default function Footer() {
             </p>
           </div>
           {/* Links */}
-          <div className="flex flex-1 justify-between min-w-[400px]">
+          <div className="flex flex-1 justify-between min-w-100">
             <div>
               <div className="font-semibold text-gray-700 mb-2">About</div>
               <ul className="space-y-1 text-gray-500 text-sm">

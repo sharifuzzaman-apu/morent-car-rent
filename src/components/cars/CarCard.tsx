@@ -19,7 +19,7 @@ export default function CarCard({ car, onRent }: CarCardProps) {
 
   return (
     <div
-      className="w-full max-w-sm rounded-xl border-blue-500 bg-white p-4 shadow-sm transition hover:shadow-lg cursor-pointer"
+      className="w-full max-w-sm mx-auto rounded-xl border-blue-500 bg-white p-4 shadow-sm transition hover:shadow-lg cursor-pointer"
       onClick={handleCardClick}
     >
       {/* Header */}

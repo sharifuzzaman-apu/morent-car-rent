@@ -4,14 +4,14 @@ import CarCard from '../cars/CarCard';
 
 export default function RecommendationCar() {
   return (
-    <section className="w-[1312px] ">
+    <section className="w-full max-w-328 mx-auto px-2 md:px-0">
       <div className="flex items-center justify-between">
-        <h2 className="my-8 mx-7 text-xl text-[#90A3BF] font-semibold">
+        <h2 className="my-4 sm:my-8 mx-0 sm:mx-7 text-xl text-[#90A3BF] font-semibold">
           Recomendation Car
         </h2>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
         {mockCars.map((car) => (
           <CarCard key={car.id} car={car} />
         ))}

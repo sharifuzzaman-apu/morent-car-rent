@@ -125,8 +125,8 @@ export default function Navbar() {
           </form>
         </div>
 
-        {/* Nav Links */}
-        <nav className="flex items-center gap-6">
+        {/* Nav Links (hide on small screens) */}
+        <nav className="hidden sm:flex items-center gap-6">
           <Link href="/cars" className="text-sm text-gray-600 hover:text-black">
             <svg
               width="44"
